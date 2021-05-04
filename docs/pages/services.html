@@ -14,9 +14,21 @@
 <body>
     <header class="header">
         <div class="collapse menu" id="navbarToggleExternalContent">
-            <ul class="nav-link-container-menu p-3 list-unstyled">
+            <ul class="nav-link-container-menu list-unstyled">
                 <li><a href="../index.html" class="nav-link-menu">Home</a></li>
-                <li><a href="./services.html" class="nav-link-menu">Services</a></li>
+                <li class="dropdown">
+                    <a class="dropdown-toggle nav-link-menu" id="navbarDropdown" role="button" data-toggle="dropdown"
+                        aria-haspopup="true" aria-expanded="false">
+                        Services
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="./services.html">All Services</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="./service_CoinMarketCap.html">CoinMarketCap</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="./service_AnimationCSS.html">Animation.css</a>
+                    </div>
+                </li>
             </ul>
         </div>
         <nav class="navbar navbar-menu">
@@ -29,7 +41,7 @@
         </nav>
     </header>
     <main class="main">
-
+        <h2>Select a service</h2>
     </main>
     <footer class="footer">
         <p>@ Nicolás Altman</p>
