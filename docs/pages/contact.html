@@ -29,6 +29,7 @@
                         <a class="dropdown-item" href="./service_AnimationCSS.html">Animation.css</a>
                     </div>
                 </li>
+                <li><a href="./contact.html" class="nav-link-menu">Contact</a></li>
             </ul>
         </div>
         <nav class="navbar navbar-menu">
@@ -40,7 +41,24 @@
         </nav>
     </header>
     <main class="main">
-
+        <form class="app-form" action="./contact.html">
+            <h4>Qué mejora le harías a este sitio?</h4>
+            <div class="app-group-form">
+                <label for="form-field-name">Name</label>
+                <input class="form-field-text" type="text" placeholder="Name" id="form-field-name" autocomplete="off" autocapitalize="words" autofocus>
+            </div>
+            <div class="app-group-form">
+                <label for="form-field-email">Email</label>
+                <input class="form-field-text" type="email" placeholder="Email" id="form-field-email" autocomplete="on" aria-autocomplete="both">
+            </div>
+            <div class="app-group-form">
+                <label for="form-field-message">Mensaje</label>
+                <textarea class="form-field-text" id="form-field-message" placeholder="Escribe tu mensaje" rows="8" required></textarea>
+            </div>
+            <div class="app-group-form">
+                <button class="btn btn-outline-primary">Enviar</button>
+            </div>
+        </form>
     </main>
     <footer class="footer">
         <p>@ Nicolás Altman</p>
