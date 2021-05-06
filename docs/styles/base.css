@@ -1,25 +1,20 @@
-:root {
-    --main-primary-color: rgb(85, 2, 4);
-	--main-primary-color-intensify: rgb(212, 0, 4);
-	--text-primary-color: #b0b7b9;
-	--main-secondary-color: rgb(0, 0, 0);
-	--text-secondary-color: white;
-	--header-height: 8vh;
-}
+/* Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500&display=swap');
+@import './variables.css';
 
 * {
 	box-sizing: border-box;
     margin: 0;
     padding: 0;
+}
+
+body {
     letter-spacing: .1rem;
+    font-family: 'Cormorant Garamond', serif;
 }
 
 p {
     margin: 0;
-}
-
-body {
-    display: grid;
 }
 
 .header {
@@ -32,16 +27,15 @@ body {
 }
 
 .main {
-    width: 100vw;
+    width: 100%;
     height: calc(100vh - var(--header-height));
     background-color: var(--main-secondary-color);
     color: var(--text-primary-color);
     text-align: center;
-    padding-top: 1rem;
 }
 
 .footer {
-    width: 100vw;
+    width: 100%;
     background-color: var(--main-primary-color);
     color: var(--text-primary-color);
     display: flex;
@@ -65,6 +59,7 @@ body {
 
 .navbar-toggler-menu-icon {
     width: 100%;
+    color: var(--text-primary-color);
 }
 
 .menu {
@@ -76,7 +71,7 @@ body {
     flex-direction: column;
     justify-content: center;
     border-right: 1px solid var(--text-primary-color);
-    z-index: 1;
+    z-index: 10;
     text-align: center;
     padding: 1rem;
 }
