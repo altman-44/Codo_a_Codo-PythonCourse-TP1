@@ -1,0 +1,96 @@
+@import './base.css';
+
+.main {
+    padding: 0;
+}
+
+.service-list-container {
+    height: 100%;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.services-container {
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 2rem;
+    padding: 0.5rem;
+    gap: 1rem;
+}
+
+.service-container {
+    color: var(--text-primary-color);
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    padding: 1rem;
+}
+
+.service-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    cursor: default;
+}
+.service-link:hover {
+    text-decoration: none;
+}
+
+.service-circle {
+    width: 10rem;
+    height: 10rem;
+    border: 1px solid var(--text-primary-color);
+    border-radius: 50%;
+    background-color: var(--text-primary-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-shadow: 0 0 0.5rem var(--main-secondary-color);
+    box-shadow: 0 0 0.3em var(--text-primary-color),
+        0 0 0.3em var(--text-primary-color),
+        inset 1rem 1rem 8rem var(--main-secondary-color);
+    cursor: pointer;
+}
+
+.service-icon {
+    font-size: 4rem;
+    color: var(--text-primary-color);
+    animation: wobble 2s ease-in 0s alternate 1 both;
+}
+
+.service-description {
+    width: 90%;
+    text-align: center;
+}
+
+.service-description-title {
+    font-size: 1.4rem;
+}
+
+@media screen and (min-width: 768px) {
+    .service-description {
+        width: 70%;
+    }
+    .service-description-title {
+        font-size: 2rem;
+    }
+    
+    .service-description-text {
+        font-size: 1.2rem;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .service-description {
+        width: 60%;
+    }
+}
