@@ -1,7 +1,9 @@
 :root {
     --main-primary-color: rgb(85, 2, 4);
 	--main-primary-color-intensify: rgb(212, 0, 4);
-	--text-primary-color: #b0b7b9;
+	--text-primary-color: rgb(176, 183, 185);
+	--text-primary-color-softer: rgba(176, 183, 185, .9);
+	--text-primary-color-much-softer: rgba(176, 183, 185, .15);
 	--main-secondary-color: rgb(2, 0, 10);
 	--header-height: 8vh;
 }

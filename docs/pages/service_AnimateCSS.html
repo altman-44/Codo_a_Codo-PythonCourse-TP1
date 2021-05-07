@@ -1,12 +1,61 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Data Manager | Animation.css Service</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+        integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <link rel="stylesheet" href="../styles/service_AnimateCSS.css">
+    <title>Data Manager | Animate.css Service</title>
 </head>
+
 <body>
-    
+    <header class="header">
+        <div class="collapse menu" id="navbarToggleExternalContent">
+            <ul class="nav-link-container-menu list-unstyled">
+                <li><a href="../index.html" class="nav-link-menu">Home</a></li>
+                <li class="dropdown">
+                    <a class="dropdown-toggle nav-link-menu" id="navbarDropdown" role="button" data-toggle="dropdown"
+                        aria-haspopup="true" aria-expanded="false">
+                        Services
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="./services.html">All Services</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="./service_CoinMarketCap.html">CoinMarketCap</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="./service_AnimateCSS.html">Animate.css</a>
+                    </div>
+                </li>
+                <li><a href="./contact.html" class="nav-link-menu">Contact</a></li>
+            </ul>
+        </div>
+        <nav class="navbar navbar-menu">
+            <button class="navbar-toggler navbar-toggler-menu" type="button" data-toggle="collapse"
+                data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent"
+                aria-expanded="false" aria-label="Toggle navigation">
+                <i class="fas fa-bars navbar-toggler-menu-icon" title="Toggle Menu"></i>
+            </button>
+        </nav>
+    </header>
+    <main class="main">
+        <div id="animation-list"></div>
+    </main>
+    <footer class="footer">
+        <p>@ Nicolás Altman</p>
+        <p>Codo a Codo - Curso de Python 2021</p>
+    </footer>
+    <script src="https://kit.fontawesome.com/58989f445a.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns"
+        crossorigin="anonymous"></script>
+    <script src="../js/service_AnimateCSS.js"></script>
 </body>
+
 </html>
