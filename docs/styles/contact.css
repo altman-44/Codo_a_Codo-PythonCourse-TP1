@@ -1,2 +1,30 @@
 @import './base.css';
 
+.app-form {
+    padding: 2rem 1rem 1rem;
+    width: 80%;
+    margin: auto;
+}
+
+.app-form-group {
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    align-items: flex-start;
+    margin: 1rem 0;
+}
+
+.form-field-text {
+    width: 100%;
+    border: none;
+    border-radius: 5px;
+    padding: .3em;
+}
+.form-field-text:focus {
+    outline-color: var(--text-primary-color);
+    outline-width: 2px;
+}
+
+textarea {
+    resize: vertical;
+}
