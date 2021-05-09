@@ -52,5 +52,6 @@ hr {
         height: initial;
         overflow-y: auto;
         flex-wrap: wrap;
+        justify-content: space-around;
     }
 }
