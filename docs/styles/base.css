@@ -18,7 +18,8 @@ p, label, span, ul {
 }
 
 ::-webkit-scrollbar {
-    width: 10px;
+    width: .7rem;
+    height: .7rem;
     display: block;
 }
 
@@ -44,7 +45,7 @@ p, label, span, ul {
 
 .main {
     width: 100%;
-    /* height: calc(100vh - var(--header-height)); */
+    height: calc(100vh - var(--header-height));
     background-color: var(--main-secondary-color);
     color: var(--text-primary-color);
     text-align: center;

@@ -1,7 +1,11 @@
 @import './base.css';
 
+.main {
+    height: auto;
+}
+
 #animation-list {
-    padding: 1rem;
+    padding: 3rem;
 }
 
 hr {
@@ -10,12 +14,10 @@ hr {
 
 .animation-type-content-container {
     display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
     gap: 2rem;
-    padding: 2rem 0;
+    padding: 2rem;
     height: 25rem;
-    overflow-y: scroll;
+    overflow-x: scroll;
 }
 .animation-type-content-container::-webkit-scrollbar {
     display: none;
@@ -35,7 +37,7 @@ hr {
     padding: 0 3rem 3rem 3rem;
     border: 1px solid var(--text-primary-color-much-softer);
     border-radius: 5px;
-    width: 20rem;
+    min-width: 20rem;
     height: 20rem;
 }
 
@@ -49,5 +51,7 @@ hr {
     .animation-type-content-container {
         height: initial;
         overflow-y: auto;
+        flex-wrap: wrap;
+        justify-content: space-around;
     }
 }
