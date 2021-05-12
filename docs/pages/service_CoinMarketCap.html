@@ -1,12 +1,739 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+        integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <link rel="stylesheet" href="../styles/service_CoinMarketCap.css">
     <title>Data Manager | CoinMarketCap Service</title>
 </head>
+
 <body>
-    
+    <header class="header">
+        <div class="collapse menu" id="navbarToggleExternalContent">
+            <ul class="nav-link-container-menu list-unstyled">
+                <li><a href="../index.html" class="nav-link-menu">Home</a></li>
+                <li class="dropdown">
+                    <a class="dropdown-toggle nav-link-menu" id="navbarDropdown" role="button" data-toggle="dropdown"
+                        aria-haspopup="true" aria-expanded="false">
+                        Services
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="./services.html">All Services</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="./service_CoinMarketCap.html">CoinMarketCap</a>
+                        <a class="dropdown-item" href="./service_AnimateCSS.html">Animate.css</a>
+                        <a class="dropdown-item" href="./service_GoogleMaps.html">Google Maps</a>
+                    </div>
+                </li>
+                <li><a href="./contact.html" class="nav-link-menu">Contact</a></li>
+            </ul>
+        </div>
+        <nav class="navbar navbar-menu">
+            <button class="navbar-toggler navbar-toggler-menu" type="button" data-toggle="collapse"
+                data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent"
+                aria-expanded="false" aria-label="Toggle navigation">
+                <i class="fas fa-bars navbar-toggler-menu-icon" title="Toggle Menu"></i>
+            </button>
+        </nav>
+    </header>
+    <main class="main">
+        <h2>CoinMarketCap API</h2>
+        <p class="service-description">Lista de las primeras criptomonedas que se encuentran dentro del top 25 del
+            ranking de CoinMarketCap.</p>
+        <div class="cryptocurrency-list-table-container">
+            <table class="app-table">
+                <thead>
+                    <tr>
+                        <th class="table-header-cell">ID</th>
+                        <th class="table-header-cell">Name</th>
+                        <th class="table-header-cell">Symbol</th>
+                        <th class="table-header-cell">Ranking</th>
+                        <th class="table-header-cell">Price USD</th>
+                        <th class="table-header-cell">Circulating Supply</th>
+                        <th class="table-header-cell">Total Supply</th>
+                        <th class="table-header-cell">Max. Supply</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="table-cell">
+                            <p>1</p>
+                        </td>
+                        <td class="table-cell">
+                            <p>Bitcoin</p>
+                        </td>
+                        <td class="table-cell">
+                            <p>BTC</p>
+                        </td>
+                        <td class="table-cell">
+                            <p>1</p>
+                        </td>
+                        <td class="table-cell">
+                            <p>9558.55163723</p>
+                        </td>
+                        <td class="table-cell">
+                            <p>17906012</p>
+                        </td>
+                        <td class="table-cell">
+                            <p>17906012</p>
+                        </td>
+                        <td class="table-cell">
+                            <p>21000000</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="table-cell">
+                            <p>1027</p>
+                        </td>
+                        <td class="table-cell">
+                            <p>Ethereum</p>
+                        </td>
+                        <td class="table-cell">
+                            <p>ETH</p>
+                        </td>
+                        <td class="table-cell">
+                            <p>2</p>
+                        </td>
+                        <td class="table-cell">
+                            <p>168.688633539</p>
+                        </td>
+                        <td class="table-cell">
+                            <p>107537936.374</p>
+                        </td>
+                        <td class="table-cell">
+                            <p>107537936.374</p>
+                        </td>
+                        <td class="table-cell">
+                            <p>-</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="table-cell">
+                            <p>52</p>
+                        </td>
+                        <td class="table-cell">
+                            <p>XRP</p>
+                        </td>
+                        <td class="table-cell">
+                            <p>XRP</p>
+                        </td>
+                        <td class="table-cell">
+                            <p>3</p>
+                        </td>
+                        <td class="table-cell">
+                            <p>0.254448519152</p>
+                        </td>
+                        <td class="table-cell">
+                            <p>42932866967</p>
+                        </td>
+                        <td class="table-cell">
+                            <p>99991366793</p>
+                        </td>
+                        <td class="table-cell">
+                            <p>100000000000</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="table-cell">
+                            <p>1831</p>
+                        </td>
+                        <td class="table-cell">
+                            <p>Bitcoin Cash</p>
+                        </td>
+                        <td class="table-cell">
+                            <p>BCH</p>
+                        </td>
+                        <td class="table-cell">
+                            <p>4</p>
+                        </td>
+                        <td class="table-cell">
+                            <p>281.02900278</p>
+                        </td>
+                        <td class="table-cell">
+                            <p>17975975</p>
+                        </td>
+                        <td class="table-cell">
+                            <p>17975975</p>
+                        </td>
+                        <td class="table-cell">
+                            <p>21000000</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="table-cell">
+                            <p>2</p>
+                        </td>
+                        <td class="table-cell">
+                            <p>Litecoin</p>
+                        </td>
+                        <td class="table-cell">
+                            <p>LTC</p>
+                        </td>
+                        <td class="table-cell">
+                            <p>5</p>
+                        </td>
+                        <td class="table-cell">
+                            <p>64.3490898062</p>
+                        </td>
+                        <td class="table-cell">
+                            <p>63147124.0076922</p>
+                        </td>
+                        <td class="table-cell">
+                            <p>63147124.0076922</p>
+                        </td>
+                        <td class="table-cell">
+                            <p>84000000</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="table-cell">
+                            <p>825</p>
+                        </td>
+                        <td class="table-cell">
+                            <p>Tether</p>
+                        </td>
+                        <td class="table-cell">
+                            <p>USDT</p>
+                        </td>
+                        <td class="table-cell">
+                            <p>6</p>
+                        </td>
+                        <td class="table-cell">
+                            <p>1.00308254852</p>
+                        </td>
+                        <td class="table-cell">
+                            <p>4008269411.01333</p>
+                        </td>
+                        <td class="table-cell">
+                            <p>4095057493.36343</p>
+                        </td>
+                        <td class="table-cell">
+                            <p>-</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="table-cell">
+                            <p>1765</p>
+                        </td>
+                        <td class="table-cell">
+                            <p>EOS</p>
+                        </td>
+                        <td class="table-cell">
+                            <p>EOS</p>
+                        </td>
+                        <td class="table-cell">
+                            <p>7</p>
+                        </td>
+                        <td class="table-cell">
+                            <p>3.2153156971</p>
+                        </td>
+                        <td class="table-cell">
+                            <p>929651261.8605</p>
+                        </td>
+                        <td class="table-cell">
+                            <p>1026351273.1073</p>
+                        </td>
+                        <td class="table-cell">
+                            <p>-</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="table-cell">
+                            <p>1839</p>
+                        </td>
+                        <td class="table-cell">
+                            <p>Binance Coin</p>
+                        </td>
+                        <td class="table-cell">
+                            <p>BNB</p>
+                        </td>
+                        <td class="table-cell">
+                            <p>8</p>
+                        </td>
+                        <td class="table-cell">
+                            <p>22.2867130214</p>
+                        </td>
+                        <td class="table-cell">
+                            <p>129175490.242999</p>
+                        </td>
+                        <td class="table-cell">
+                            <p>189175490.242499</p>
+                        </td>
+                        <td class="table-cell">
+                            <p>187536713</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="table-cell">
+                            <p>3602</p>
+                        </td>
+                        <td class="table-cell">
+                            <p>Bitcoin SV</p>
+                        </td>
+                        <td class="table-cell">
+                            <p>BSV</p>
+                        </td>
+                        <td class="table-cell">
+                            <p>9</p>
+                        </td>
+                        <td class="table-cell">
+                            <p>128.391323889</p>
+                        </td>
+                        <td class="table-cell">
+                            <p>17854985.7508877</p>
+                        </td>
+                        <td class="table-cell">
+                            <p>17854985.7508877</p>
+                        </td>
+                        <td class="table-cell">
+                            <p>21000000</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="table-cell">
+                            <p>512</p>
+                        </td>
+                        <td class="table-cell">
+                            <p>Stellar</p>
+                        </td>
+                        <td class="table-cell">
+                            <p>XLM</p>
+                        </td>
+                        <td class="table-cell">
+                            <p>10</p>
+                        </td>
+                        <td class="table-cell">
+                            <p>0.0622381942426</p>
+                        </td>
+                        <td class="table-cell">
+                            <p>19639376092.5818</p>
+                        </td>
+                        <td class="table-cell">
+                            <p>105283157144.904</p>
+                        </td>
+                        <td class="table-cell">
+                            <p>-</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="table-cell">
+                            <p>328</p>
+                        </td>
+                        <td class="table-cell">
+                            <p>Monero</p>
+                        </td>
+                        <td class="table-cell">
+                            <p>XMR</p>
+                        </td>
+                        <td class="table-cell">
+                            <p>11</p>
+                        </td>
+                        <td class="table-cell">
+                            <p>67.6411306847</p>
+                        </td>
+                        <td class="table-cell">
+                            <p>17182432.3964597</p>
+                        </td>
+                        <td class="table-cell">
+                            <p>17182432.3964597</p>
+                        </td>
+                        <td class="table-cell">
+                            <p>-</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="table-cell">
+                            <p>2010</p>
+                        </td>
+                        <td class="table-cell">
+                            <p>Cardano</p>
+                        </td>
+                        <td class="table-cell">
+                            <p>ADA</p>
+                        </td>
+                        <td class="table-cell">
+                            <p>12</p>
+                        </td>
+                        <td class="table-cell">
+                            <p>0.0445993510476</p>
+                        </td>
+                        <td class="table-cell">
+                            <p>25927070538</p>
+                        </td>
+                        <td class="table-cell">
+                            <p>31112483745</p>
+                        </td>
+                        <td class="table-cell">
+                            <p>45000000000</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="table-cell">
+                            <p>3957</p>
+                        </td>
+                        <td class="table-cell">
+                            <p>UNUS SED LEO</p>
+                        </td>
+                        <td class="table-cell">
+                            <p>LEO</p>
+                        </td>
+                        <td class="table-cell">
+                            <p>13</p>
+                        </td>
+                        <td class="table-cell">
+                            <p>1.14239644171</p>
+                        </td>
+                        <td class="table-cell">
+                            <p>999498892.9</p>
+                        </td>
+                        <td class="table-cell">
+                            <p>999498892.9</p>
+                        </td>
+                        <td class="table-cell">
+                            <p>-</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="table-cell">
+                            <p>1958</p>
+                        </td>
+                        <td class="table-cell">
+                            <p>TRON</p>
+                        </td>
+                        <td class="table-cell">
+                            <p>TRX</p>
+                        </td>
+                        <td class="table-cell">
+                            <p>14</p>
+                        </td>
+                        <td class="table-cell">
+                            <p>0.015600749746</p>
+                        </td>
+                        <td class="table-cell">
+                            <p>66682072191.4</p>
+                        </td>
+                        <td class="table-cell">
+                            <p>99281283754.3</p>
+                        </td>
+                        <td class="table-cell">
+                            <p>-</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="table-cell">
+                            <p>131</p>
+                        </td>
+                        <td class="table-cell">
+                            <p>Dash</p>
+                        </td>
+                        <td class="table-cell">
+                            <p>DASH</p>
+                        </td>
+                        <td class="table-cell">
+                            <p>15</p>
+                        </td>
+                        <td class="table-cell">
+                            <p>81.0199927348</p>
+                        </td>
+                        <td class="table-cell">
+                            <p>9007359.47624625</p>
+                        </td>
+                        <td class="table-cell">
+                            <p>9007359.47624625</p>
+                        </td>
+                        <td class="table-cell">
+                            <p>18900000</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="table-cell">
+                            <p>1321</p>
+                        </td>
+                        <td class="table-cell">
+                            <p>Ethereum Classic</p>
+                        </td>
+                        <td class="table-cell">
+                            <p>ETC</p>
+                        </td>
+                        <td class="table-cell">
+                            <p>16</p>
+                        </td>
+                        <td class="table-cell">
+                            <p>6.42284621257</p>
+                        </td>
+                        <td class="table-cell">
+                            <p>113095995</p>
+                        </td>
+                        <td class="table-cell">
+                            <p>113095995</p>
+                        </td>
+                        <td class="table-cell">
+                            <p>210000000</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="table-cell">
+                            <p>2011</p>
+                        </td>
+                        <td class="table-cell">
+                            <p>Tezos</p>
+                        </td>
+                        <td class="table-cell">
+                            <p>XTZ</p>
+                        </td>
+                        <td class="table-cell">
+                            <p>17</p>
+                        </td>
+                        <td class="table-cell">
+                            <p>1.05187871127</p>
+                        </td>
+                        <td class="table-cell">
+                            <p>660373611.97278</p>
+                        </td>
+                        <td class="table-cell">
+                            <p>801312599.488106</p>
+                        </td>
+                        <td class="table-cell">
+                            <p>-</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="table-cell">
+                            <p>1720</p>
+                        </td>
+                        <td class="table-cell">
+                            <p>IOTA</p>
+                        </td>
+                        <td class="table-cell">
+                            <p>MIOTA</p>
+                        </td>
+                        <td class="table-cell">
+                            <p>18</p>
+                        </td>
+                        <td class="table-cell">
+                            <p>0.249358505917</p>
+                        </td>
+                        <td class="table-cell">
+                            <p>2779530283</p>
+                        </td>
+                        <td class="table-cell">
+                            <p>2779530283</p>
+                        </td>
+                        <td class="table-cell">
+                            <p>2779530283</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="table-cell">
+                            <p>1975</p>
+                        </td>
+                        <td class="table-cell">
+                            <p>Chainlink</p>
+                        </td>
+                        <td class="table-cell">
+                            <p>LINK</p>
+                        </td>
+                        <td class="table-cell">
+                            <p>19</p>
+                        </td>
+                        <td class="table-cell">
+                            <p>1.81476268884</p>
+                        </td>
+                        <td class="table-cell">
+                            <p>350000000</p>
+                        </td>
+                        <td class="table-cell">
+                            <p>1000000000</p>
+                        </td>
+                        <td class="table-cell">
+                            <p>-</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="table-cell">
+                            <p>1376</p>
+                        </td>
+                        <td class="table-cell">
+                            <p>NEO</p>
+                        </td>
+                        <td class="table-cell">
+                            <p>NEO</p>
+                        </td>
+                        <td class="table-cell">
+                            <p>20</p>
+                        </td>
+                        <td class="table-cell">
+                            <p>8.81796722563</p>
+                        </td>
+                        <td class="table-cell">
+                            <p>70538831</p>
+                        </td>
+                        <td class="table-cell">
+                            <p>100000000</p>
+                        </td>
+                        <td class="table-cell">
+                            <p>100000000</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="table-cell">
+                            <p>1518</p>
+                        </td>
+                        <td class="table-cell">
+                            <p>Maker</p>
+                        </td>
+                        <td class="table-cell">
+                            <p>MKR</p>
+                        </td>
+                        <td class="table-cell">
+                            <p>21</p>
+                        </td>
+                        <td class="table-cell">
+                            <p>471.141888385</p>
+                        </td>
+                        <td class="table-cell">
+                            <p>1000000</p>
+                        </td>
+                        <td class="table-cell">
+                            <p>1000000</p>
+                        </td>
+                        <td class="table-cell">
+                            <p>-</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="table-cell">
+                            <p>3408</p>
+                        </td>
+                        <td class="table-cell">
+                            <p>USD Coin</p>
+                        </td>
+                        <td class="table-cell">
+                            <p>USDC</p>
+                        </td>
+                        <td class="table-cell">
+                            <p>22</p>
+                        </td>
+                        <td class="table-cell">
+                            <p>1.00053923682</p>
+                        </td>
+                        <td class="table-cell">
+                            <p>450721758.794571</p>
+                        </td>
+                        <td class="table-cell">
+                            <p>452174935.73</p>
+                        </td>
+                        <td class="table-cell">
+                            <p>-</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="table-cell">
+                            <p>873</p>
+                        </td>
+                        <td class="table-cell">
+                            <p>NEM</p>
+                        </td>
+                        <td class="table-cell">
+                            <p>XEM</p>
+                        </td>
+                        <td class="table-cell">
+                            <p>23</p>
+                        </td>
+                        <td class="table-cell">
+                            <p>0.0498502012628</p>
+                        </td>
+                        <td class="table-cell">
+                            <p>8999999999</p>
+                        </td>
+                        <td class="table-cell">
+                            <p>8999999999</p>
+                        </td>
+                        <td class="table-cell">
+                            <p>-</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="table-cell">
+                            <p>3794</p>
+                        </td>
+                        <td class="table-cell">
+                            <p>Cosmos</p>
+                        </td>
+                        <td class="table-cell">
+                            <p>ATOM</p>
+                        </td>
+                        <td class="table-cell">
+                            <p>24</p>
+                        </td>
+                        <td class="table-cell">
+                            <p>2.17513838278</p>
+                        </td>
+                        <td class="table-cell">
+                            <p>190688439.2</p>
+                        </td>
+                        <td class="table-cell">
+                            <p>237928230.821588</p>
+                        </td>
+                        <td class="table-cell">
+                            <p>-</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="table-cell">
+                            <p>2566</p>
+                        </td>
+                        <td class="table-cell">
+                            <p>Ontology</p>
+                        </td>
+                        <td class="table-cell">
+                            <p>ONT</p>
+                        </td>
+                        <td class="table-cell">
+                            <p>25</p>
+                        </td>
+                        <td class="table-cell">
+                            <p>0.719414522278</p>
+                        </td>
+                        <td class="table-cell">
+                            <p>533483170</p>
+                        </td>
+                        <td class="table-cell">
+                            <p>1000000000</p>
+                        </td>
+                        <td class="table-cell">
+                            <p>-</p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <aside class="service-next-features">
+            <h4>Próximamente...</h4>
+            <ul class="px-4">
+                <li>Tabla actualizada con los datos que brinda la API de CoinMarketCap.</li>
+                <li>Portfolio para seleccionar las criptomonedas favoritas.</li>
+            </ul>
+        </aside>
+        <!-- <textarea id="outer-html"></textarea> -->
+    </main>
+    <footer class="footer">
+        <p>@ Nicolás Altman</p>
+        <p>Codo a Codo - Curso de Python 2021</p>
+    </footer>
+    <script src="https://kit.fontawesome.com/58989f445a.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns"
+        crossorigin="anonymous"></script>
+    <!-- <script src="../js/help.js"></script> -->
 </body>
+
 </html>

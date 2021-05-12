@@ -1,0 +1,73 @@
+@import './base.css';
+
+.main {
+    height: auto;
+    padding: 2rem 0;
+}
+
+.service-description {
+    width: 80%;
+    margin: 0 auto 1rem;
+}
+
+.service-next-features {
+    margin-top: 2rem;
+    padding: 1rem;
+    text-align: left;
+    color: var(--main-secondary-color);
+    font-weight: bold;
+    background-color: var(--text-primary-color);
+}
+
+.cryptocurrency-list-table-container {
+    margin: auto;
+    width: 95%;
+    height: 30rem;
+    overflow: auto;
+    position: relative;
+    border: 1px solid var(--text-primary-color);
+}
+.cryptocurrency-list-table-container::-webkit-scrollbar-thumb {
+    background-color: var(--text-primary-color-softer);
+}
+
+.app-table {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+}
+
+.app-table tr:nth-child(odd) {
+    background-color: var(--main-secondary-color);
+    color: var(--text-primary-color);
+}
+.app-table tr:nth-child(even) {
+    background-color: var(--text-primary-color-much-softer);
+    color: var(--text-primary-color);
+}
+.app-table tr:nth-of-type(-n+5) td {
+    font-weight: bold;
+    background-color: var(--text-primary-color);
+    color: var(--main-secondary-color);
+}
+
+.app-table td, .app-table th {
+    border: 1px solid var(--main-primary-color-intensify-softer);
+    text-align: center;
+    padding: .4rem;
+}
+.app-table td:first-child, .app-table th:first-child {
+    border-left-width: 0;
+}
+.app-table td:last-child, .app-table th:last-child {
+    border-right-color: var(--text-primary-color);
+}
+
+.app-table thead th.table-header-cell {
+    position: -webkit-sticky; /* this is for all Safari (Desktop & iOS), not for Chrome */
+    position: sticky;
+    top: -.5%;
+    background-color: var(--main-primary-color);
+    color: var(--text-primary-color);
+}
