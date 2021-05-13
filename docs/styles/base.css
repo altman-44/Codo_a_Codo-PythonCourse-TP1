@@ -21,31 +21,42 @@ p, label, span, ul {
     width: .7rem;
     height: .7rem;
     display: block;
+    background-color: var(--main-secondary-color);
+    border: 1px solid var(--text-primary-color);
+    border-right: none;
+    border-bottom: none;
 }
 
 ::-webkit-scrollbar-thumb {
-    background-color: var(--text-primary-color);
+    background-color: var(--main-primary-color);    
+    border: 1px solid var(--text-primary-color);
+    border-right: none;
+    border-bottom: none;
 }
 ::-webkit-scrollbar-thumb:hover {
-    background-color: var(--text-primary-color-softer);
+    background-color: var(--text-primary-color);
+    border-color: var(--main-secondary-color);
 }
-
-::-webkit-scrollbar-track {
-    background-color: var(--main-secondary-color);
+::-webkit-scrollbar-corner {
+    background-color: transparent;
+    border: 1px solid var(--text-primary-color);
+    border-bottom: none;
+    border-right: none;
 }
 
 .header {
-    height: var(--header-height);
     background-color: var(--main-primary-color);
     color: var(--text-primary-color);
     display: flex;
     border-bottom: 1px solid var(--text-primary-color);
-    padding-bottom: .1rem;
+    width: 100%;
+    z-index: 10;
+    position: sticky;
+    top:0;
 }
 
 .main {
     width: 100%;
-    height: calc(100vh - var(--header-height));
     background-color: var(--main-secondary-color);
     color: var(--text-primary-color);
     text-align: center;
@@ -68,10 +79,14 @@ p, label, span, ul {
 .navbar-menu {
     background-color: var(--main-primary-color);
     padding: 0;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
 }
 
 .navbar-toggler-menu {
     width: 3rem;
+    height: 100%;
 }
 
 .navbar-toggler-menu-icon {
@@ -80,17 +95,21 @@ p, label, span, ul {
 }
 
 .menu {
-    height: 100vh;
-    transition: .5s ease;
+    transition: .1s ease-out;
     background-color: var(--main-primary-color);
-    display: flex;
-    -ms-flex-direction: column;
-    flex-direction: column;
-    justify-content: center;
     border-right: 1px solid var(--text-primary-color);
     z-index: 10;
-    text-align: center;
     padding: 1rem;
+    text-align: center;
+    max-width: 10rem;
+    position: fixed;
+    display: flex;
+    align-items: center;
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0.01); /* Para remover los restos de pixeles que deja la animacion cuando se cierra el menu: https://stackoverflow.com/questions/9983520/webkit-animation-is-leaving-junk-pixels-behind-on-the-screen/17822836 */
+    transform: translateX(-100%);
+}
+.menu.show {
+    transform: translateX(0);
 }
 
 .nav-link-container-menu {
@@ -99,7 +118,7 @@ p, label, span, ul {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 5%;
+    gap: 1rem;
     height: 100%;
 }
 
@@ -110,21 +129,87 @@ p, label, span, ul {
 }
 .nav-link-menu:hover {
     text-decoration: none;
+}
+
+.nav-link-menu:hover, .navbar-brand:hover {
     color: var(--text-primary-color);
-    text-shadow: 0 0 .1rem var(--text-primary-color), 0 0 .1rem var(--text-primary-color);
+    text-shadow: 0 0 .05rem var(--text-primary-color), 0 0 .05rem var(--text-primary-color);
+}
+
+.navbar-logo {
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    padding: 0 1rem;
+    gap: .5rem;
+    color: var(--text-primary-color);
+}
+.navbar-logo:hover {
+    text-decoration: none;
+    color: var(--text-primary-color);
+}
+.navbar-logo img {
+    height: 2.5rem;
+}
+
+.service-description {
+    width: 80%;
+    margin: 0 auto 1rem;
+}
+
+.service-next-features {
+    margin-top: 2rem;
+    padding: 1rem;
+    text-align: left;
+    color: var(--main-secondary-color);
+    font-weight: bold;
+    background-color: var(--text-primary-color);
+}
+
+.carousel-indicators {
+    z-index: 1;
 }
 
 @media screen and (min-width: 576px) {
-    .menu {
-        /* width: 15vw; */
-    }
     .footer {
         flex-direction: row;
     }
 }
 
 @media screen and (min-width: 768px) {
+    .header {
+        border: none;
+    }
+    .navbar-logo img {
+        height: 3rem;
+    }
+    .navbar-menu {
+        width: 100%;
+        display: flex;
+        -ms-flex-direction: row-reverse;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+        border-bottom: 1px solid var(--text-primary-color);
+        padding: 0 1rem;
+    }
     .menu {
-        /* width: 10vw; */
+        transform: none;
+        /* height: var(--header-height); */
+        height: 100%;
+        z-index: 0;
+        text-align: center;
+        border: none;
+        position: static;
+        padding: 0;
+        max-width: 100%;
+    }
+    .nav-link-container-menu {
+        display: flex;
+        -ms-flex-direction: row;
+        flex-direction: row;
+        justify-content: flex-end;
+        align-items: center;
+        width: 100%;
+        gap: 1rem;
     }
 }
