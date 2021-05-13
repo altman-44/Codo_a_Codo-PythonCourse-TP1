@@ -5,55 +5,62 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../img/favicon.png" type="image/x-icon">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
         integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
     <link rel="stylesheet" href="../styles/contact.css">
-    <title>Data Manager | Home</title>
+    <title>Contact | Data Manager</title>
 </head>
 
 <body>
     <header class="header">
-        <div class="collapse menu" id="navbarToggleExternalContent">
-            <ul class="nav-link-container-menu list-unstyled">
-                <li><a href="../index.html" class="nav-link-menu">Home</a></li>
-                <li class="dropdown">
-                    <a class="dropdown-toggle nav-link-menu" id="navbarDropdown" role="button" data-toggle="dropdown"
-                        aria-haspopup="true" aria-expanded="false">
-                        Services
-                    </a>
-                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="./services.html">All Services</a>
-                        <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="./service_CoinMarketCap.html">CoinMarketCap</a>
-                        <a class="dropdown-item" href="./service_AnimateCSS.html">Animate.css</a>
-                        <a class="dropdown-item" href="./service_GoogleMaps.html">Google Maps</a>
-                    </div>
-                </li>
-                <li><a href="./contact.html" class="nav-link-menu">Contact</a></li>
-            </ul>
-        </div>
-        <nav class="navbar navbar-menu">
+        <nav class="navbar navbar-menu navbar-expand-md">
             <button class="navbar-toggler navbar-toggler-menu" type="button" data-toggle="collapse"
                 data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent"
                 aria-expanded="false" aria-label="Toggle navigation">
                 <i class="fas fa-bars navbar-toggler-menu-icon" title="Toggle Menu"></i>
             </button>
+            <div class="collapse navbar-collapse menu" id="navbarToggleExternalContent">
+                <ul class="nav-link-container-menu list-unstyled">
+                    <li><a href="../index.html" class="nav-link-menu">Home</a></li>
+                    <li class="dropdown d-flex">
+                        <a href="../pages/services.html" class="nav-link-menu">Services</a>
+                        <a class="dropdown-toggle dropdown-toggle-split nav-link-menu" id="navbarDropdown" role="button"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="../pages/services.html">All Services</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="../pages/service_CoinMarketCap.html">CoinMarketCap</a>
+                            <a class="dropdown-item" href="../pages/service_AnimateCSS.html">Animate.css</a>
+                            <a class="dropdown-item" href="../pages/service_GoogleMaps.html">Google Maps</a>
+                        </div>
+                    </li>
+                    <li><a href="../pages/contact.html" class="nav-link-menu">Contact</a></li>
+                </ul>
+            </div>
+            <a href="/" class="navbar-logo">
+                <img src="../img/favicon.png" alt="Logo">
+                <p class="navbar-brand">Data Manager</p>
+            </a>
         </nav>
     </header>
     <main class="main">
         <form class="app-form" action="./contact.html">
-            <h4>Qué mejora le harías a este sitio?</h4>
+            <h4>¿Qué mejora le harías a este sitio?</h4>
             <div class="app-form-group">
                 <label for="form-field-name">Name</label>
-                <input class="form-field-text" type="text" placeholder="Name" id="form-field-name" autocomplete="off" autocapitalize="words" autofocus>
+                <input class="form-field-text" type="text" placeholder="Name" id="form-field-name" autocomplete="off"
+                    autocapitalize="words" autofocus>
             </div>
             <div class="app-form-group">
                 <label for="form-field-email">Email</label>
-                <input class="form-field-text" type="email" placeholder="Email" id="form-field-email" autocomplete="on" aria-autocomplete="both">
+                <input class="form-field-text" type="email" placeholder="Email" id="form-field-email" autocomplete="on"
+                    aria-autocomplete="both">
             </div>
             <div class="app-form-group">
                 <label for="form-field-message">Mensaje</label>
-                <textarea class="form-field-text" id="form-field-message" placeholder="Escribe tu mensaje" rows="8" required></textarea>
+                <textarea class="form-field-text" id="form-field-message" placeholder="Escribe tu mensaje" rows="8"
+                    required></textarea>
             </div>
             <div class="app-form-group">
                 <button class="btn btn-outline-primary" type="submit">Enviar</button>
@@ -71,6 +78,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns"
         crossorigin="anonymous"></script>
+    <script src="../js/base.js"></script>
 </body>
 
 </html>

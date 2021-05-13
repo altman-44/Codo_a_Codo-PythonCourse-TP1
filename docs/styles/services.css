@@ -1,7 +1,7 @@
 @import './base.css';
 
 .main {
-    padding: 0;
+    padding: 2rem 0;
 }
 
 .service-list-container {

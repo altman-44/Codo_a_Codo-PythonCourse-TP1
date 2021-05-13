@@ -2,10 +2,11 @@
 
 .main {
     height: auto;
+    padding: 2rem 0;
 }
 
 #animation-list {
-    padding: 3rem;
+    padding: 2rem;
 }
 
 hr {
