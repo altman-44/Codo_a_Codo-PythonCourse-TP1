@@ -1,5 +1,11 @@
 @import './base.css';
 
+.main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 .app-form {
     padding: 2rem 1rem 1rem;
     width: 80%;

@@ -16,7 +16,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const carouselControlNext = document.querySelector('.carousel-control-next')
     // Se le agregan los eventos para detectar si el usuario movio el dedo sobre la pantalla
     // (sobre el carousel) hacia la izquierda o derecha.
-    console.log(carouselServices.dispa)
     carouselServices.addEventListener('touchstart', handleTouchStart)
     carouselServices.addEventListener('touchend', handleTouchEnd)
 
@@ -30,8 +29,12 @@ document.addEventListener('DOMContentLoaded', () => {
         if (lastTouchX) {
             const newTouchX = evt.changedTouches[0].clientX
             if (newTouchX > lastTouchX) {
+                // El usuario quiere ir al item previo por lo que se setea
+                // una animación para moverse a la izquierda
                 toggleServiceRollAnimation(carouselControlPrev)
             } else if (newTouchX < lastTouchX) {
+                // El usuario quiere ir al item siguiente por lo que se setea
+                // una animación para moverse a la derecha
                 toggleServiceRollAnimation(carouselControlNext)
             }
             lastTouchX = null

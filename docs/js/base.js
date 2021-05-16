@@ -7,10 +7,10 @@ document.addEventListener('DOMContentLoaded', () => {
     function setMainHeight() {
         let headerHeight = document.querySelector('header').clientHeight
         document.querySelector('main').style.minHeight =
-            window.screen.height - headerHeight + 'px'
+            (window.innerHeight - headerHeight) + 'px'
         const menu = document.querySelector('.menu')
         if (window.screen.width < 768) {
-            menu.style.minHeight = window.screen.height + 'px'
+            menu.style.minHeight = window.innerHeight + 'px'
             menu.style.top = headerHeight + 'px'
         } else {
             menu.style.minHeight = '100%'

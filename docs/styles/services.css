@@ -2,19 +2,22 @@
 
 .main {
     padding: 2rem 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .service-list-container {
-    height: 100%;
     display: flex;
     -ms-flex-direction: column;
     flex-direction: column;
     justify-content: center;
     gap: 2rem;
+    width: 100%;
 }
 
 .carousel-inner {
-    height: 20rem;
+    height: 20rem; /* Para que tenga un alto fijo y no vaya cambiando según el contenido porque quedaría desprolijo */
 }
 
 .service-container {
