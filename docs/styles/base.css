@@ -75,7 +75,6 @@ ul {
     background: -moz-radial-gradient(circle, var(--main-secondary-color) 0%, rgb(0, 0, 0) 100%);
     background: -webkit-radial-gradient(circle, var(--main-secondary-color) 0%, rgb(0, 0, 0) 100%);
     background: radial-gradient(circle, var(--main-secondary-color) 0%, rgb(0, 0, 0) 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#01000f', endColorstr='#000000',GradientType=0 ); /* IE6-9 */
 }
 
 .footer {
@@ -84,12 +83,12 @@ ul {
     color: var(--text-primary-color);
     display: flex;
     justify-content: space-around;
-    align-items: center;
+    align-items: flex-start;
     -ms-flex-direction: column;
     flex-direction: column;
     padding: 2rem;
-    text-align: center;
     border-top: 1px solid var(--text-primary-color);
+    gap: .5rem;
 }
 
 .navbar-menu {
@@ -111,7 +110,6 @@ ul {
 }
 
 .menu {
-    transition: 0.1s ease-out;
     background-color: var(--main-primary-color);
     border: 1px solid var(--text-primary-color);
     border-left: none;
@@ -124,6 +122,7 @@ ul {
     display: flex;
     align-items: center;
     box-shadow: 0 0 1px rgba(0, 0, 0, 0.01); /* Para remover los restos de pixeles que deja la animacion cuando se cierra el menu: https://stackoverflow.com/questions/9983520/webkit-animation-is-leaving-junk-pixels-behind-on-the-screen/17822836 */
+    transition: 0.1s ease-out;
     transform: translateX(-100%);
 }
 .menu.show {
@@ -147,6 +146,12 @@ ul {
 }
 .nav-link-menu:hover {
     text-decoration: none;
+}
+.nav-link-menu.dropdown-toggle {    
+    transition: transform .5s ease;
+}
+.nav-link-menu.dropdown-toggle:hover {
+    transform: rotateX(360deg);
 }
 
 .nav-link-menu:hover,
@@ -202,10 +207,29 @@ ul {
     color: var(--text-primary-color);
 }
 
-@media screen and (min-width: 576px) {
-    .footer {
-        flex-direction: row;
-    }
+.app-form {
+    padding: 2rem 1rem 1rem;
+    width: 80%;
+    margin: auto;
+}
+
+.app-form-group {
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    align-items: flex-start;
+    margin: 1rem 0;
+}
+
+.form-field-text {
+    width: 100%;
+    border: none;
+    border-radius: 5px;
+    padding: .3em;
+}
+.form-field-text:focus {
+    outline-color: var(--text-primary-color);
+    outline-width: 2px;
 }
 
 @media screen and (min-width: 768px) {
@@ -246,5 +270,12 @@ ul {
         align-items: center;
         width: 100%;
         gap: 1rem;
+    }
+    .footer {
+        display: flex;
+        align-items: center;
+        -ms-flex-direction: row;
+        flex-direction: row;
+        gap: 0;
     }
 }

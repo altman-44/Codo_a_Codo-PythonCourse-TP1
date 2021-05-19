@@ -45,12 +45,55 @@
         </nav>
     </header>
     <main class="main">
-        <h1>Data Manager</h1>
-        <p>Obtenemos y mostramos datos que provienen de distintas fuentes.</p>
+        <section class="section-description">
+            <h1>Data Manager</h1>
+            <h4>Creá tus servicios y compartilos con el resto del mundo</h4>
+        </section>
+        <section class="section-help">
+            <div class="section-help-item">
+                <h4>¿Qué es Data Manager?</h4>
+                <p>Data Manager es un proyecto que busca proveer una gran variedad de <a href="#help-servicio"
+                        title="Ir a ¿Qué es un servicio?">servicios</a> construidos por los mismos usuarios de la
+                    plataforma. Queremos construir una comunidad dispuesta a aportar ideas y conocimientos para así
+                    crear y mejorar servicios. Si bien el proyecto está orientado a programadores dado que estos son los
+                    creadores de servicios, en un futuro vamos a incorporar interfaces para usuarios que no sepan
+                    programar.</p>
+            </div>
+            <div class="section-help-item">
+                <h4 id="help-servicio">¿Qué es un servicio?</h4>
+                <p>Un servicio es una página cuya funcionalidad es administrar cierta información. Dicha información
+                    puede ser de cualquier categoría. De esta manera, cada servicio se convierte en una SPA (Single Page
+                    Application) ya que se basa en un solo archivo html (obviamente, el cual puede importar otros
+                    archivos tales como css, js, etc.).</p>
+            </div>
+            <div class="section-help-item">
+                <h4 id="help-servicio">Creá y personalizá tus propios servicios!</h4>
+                <p>¿Querés crear un servicio? Seguí estos pasos:</p>
+                <ul class="section-help-steps-list">
+                    <li>Entrá a <a target="_blank" href="https://github.com/altman-44/Data_Manager.git">nuestro repo</a>.</li>
+                    <li>Hacé un fork.</li>
+                    <li>Agregá tu servicio mediante un archivo html en ./src/pages/ (y los archivos que necesites en
+                        ./src/styles/ y ./src/js donde corresponda).</li>
+                    <li>Hacé un pull request. Ni bien comprobemos el pull request, lo aceptaremos.</li>
+                </ul>
+            </div>
+        </section>
+        <section class="section-news">
+            <div class="section-news-header">
+                <h3>¿Querés saber cuando surgen nuevos servicios?</h3>
+            </div>
+            <div class="section-news-body">
+                <p>Ingresá tu email para recibir las últimas novedades!</p>
+                <div class="section-news-input-container">
+                    <input class="form-field-text" type="email" placeholder="Email">
+                    <button class="btn btn-outline-primary" type="button" role="button">Enviar</button>
+                </div>
+            </div>
+        </section>
     </main>
     <footer class="footer">
-        <p>@ Nicolás Altman</p>
-        <p>Codo a Codo - Curso de Python 2021</p>
+        <p>@ Nicolás Altman - Python, Comisión 2124</p>
+        <p>© Data Manager 2021</p>
     </footer>
     <a href='https://www.freepik.es/vectores/fondo'></a>
     <script src="https://kit.fontawesome.com/58989f445a.js" crossorigin="anonymous"></script>
