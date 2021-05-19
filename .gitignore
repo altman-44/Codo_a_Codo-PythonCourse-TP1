@@ -1,5 +1,6 @@
-docs/js/help.js
+src/js/help.js
 server/
 *.jpg
 *.png
+!favicon.png
 img-links.txt
