@@ -18,13 +18,23 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
+    // Cambiar el comportamiento de los links ancla.
+    // Porque sino envía al usuario al target pero el header,
+    // al estar con position:sticky, se superpone al target.
     function setAnchorLinksBehavior() {
+        // Seleccionar todos los elementos 'a' y, por cada uno...
         document.querySelectorAll('a').forEach((aElement) => {
+            // ... dividir el valor del atributo href donde haya un '#'
+            // para seleccionar solo los que sean links ancla (si se dividió en 2 en vez de 1)
             const splitted = aElement.href.split('#')
             if (splitted.length > 1)
+                // Agregar el evento 'click' a los links ancla
                 aElement.addEventListener('click', (e) => {
+                    // Prevenir lo que hace el evento por defecto
                     e.preventDefault()
+                    // Seleccionar el target
                     const target = document.querySelector(`#${splitted[1]}`)
+                    // Subir o bajar hacia donde esté el target, centrándolo en la pantalla
                     target.scrollIntoView({
                         behavior: 'smooth',
                         block: 'center'
